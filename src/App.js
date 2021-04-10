@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React, { useState, useEffect, useCallback } from 'react';
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import Login from './Component/Login/Login';
+import Registration from './Component/Registration/Registration';
+import Events from './Component/Events/Events';
 function App() {
+  const history = useHistory();
+  const handleOnClick = useCallback(() => history.push('/login'), [history]);
+  const EventsClick = useCallback(() => history.push('/events'), [history]);
+  if ( localStorage.getItem('userId') == "undefined") {
+    handleOnClick()
+  }
+  else{
+    EventsClick()
+  }
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path='/login' render={() => <Login />} />
+        <Route path='/registration' render={() => <Registration />} />
+        <Route path='/events' render={() => <Events />} />
+      </Switch>
     </div>
   );
 }

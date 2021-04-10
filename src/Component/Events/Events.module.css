@@ -1,0 +1,217 @@
+.events{
+padding: 30px ;
+display: flex;
+}
+.myEventsMenu{
+    width: 140px;
+    background: rgb(255, 228, 234);
+    height: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    color: rgb(88, 88, 88);
+    position: relative;
+    min-height: 450px;
+}
+.myEvents{
+    margin-left: 20px;
+    background: rgb(255, 228, 234);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    width: 100%;
+    border-radius: 6px;
+}
+.dontChouse{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-top: 100px;
+}
+.eventName{
+margin: 0;
+margin-left: 10px;
+margin-top: 10px;
+}
+.resourceInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.resource{
+    display: flex;
+    width: 100%;
+}
+.changeButton{
+    margin-right: 10px;
+    background: #ffff55;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    height: 25px;
+}
+.delButton{
+    margin-right: 10px;
+    background: #FA0A0A;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    height: 25px;
+}
+.saveButton{
+    margin-right: 10px;
+    background: #00AA00;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    height: 25px;
+}
+.addResource{
+    margin-right: 10px;
+    background: #00AA00;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    height: 25px;
+    margin-left: auto;
+    min-width: 115px;
+}
+.res input{
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid rgba(0,0,0,.32);
+    border-radius: 4px;
+    height: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.nameBox{
+    display: flex;
+}
+button{
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+.addResourcePopupFon{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.32);
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.addResourcePopup{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding:10px;
+    width: 392px;
+    height: max-content;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 20%), 0 2px 10px rgb(0 0 0 / 8%), 0 1px 1px rgb(0 0 0 / 16%);
+}
+.addResourceText{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.addResourceInput{
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 1px solid rgba(0,0,0,.32);
+    border-radius: 4px;
+    height: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.addResourcePopupAddButton{
+    margin-left: 10px;
+    background: #00AA00;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    width: 80px;
+    height: 35px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.addResourcePopupСancellationButton{
+    margin-right: 10px;
+    background: #FA0A0A;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 80px;
+    height: 35px;
+}
+.delResourcePopupFon{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.32);
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.delResourcePopup{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding:10px;
+    width: 392px;
+    height: max-content;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 20%), 0 2px 10px rgb(0 0 0 / 8%), 0 1px 1px rgb(0 0 0 / 16%);
+}
+.designation{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-right: 20px;
+        margin-left: 10px;
+}
+.exit{
+    background: #FA0A0A;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+}
+.addEventButton{
+    margin-top: 50px;
+    background: #00AA00;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.08),
+    0 1px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    padding: 5px;
+    width: 100px;
+    margin-bottom: 10px;
+}
