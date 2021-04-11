@@ -42,6 +42,10 @@ const Events = (props) => {
             })
     }, []);
     useEffect(() => {
+      const time =  setInterval(timer, 1000);
+    }, []);
+
+    useEffect(() => {
         Axios.get('http://localhost:3001/resources')
             .then(response => {
                 // console.log(response.data);
@@ -68,6 +72,21 @@ const Events = (props) => {
                 quantity: changeResource.quantity,
                 id: changeResource.id,
             })
+    }
+    const timer =  () => {
+        console.log("Обновление всего");
+        Axios.get('http://localhost:3001/events')
+        .then(response => {
+            setEvents(response.data.filter(e => e.idUser == localStorage.getItem('userId')))
+        })
+        Axios.get('http://localhost:3001/resources')
+        .then(response => {
+            // console.log(response.data);
+            if (event) {
+                setResources(response.data.filter(e => e.idEvent == event.id))
+                // console.log();
+            }
+        })
     }
     const addNewResource = () => {
         if (newResource.name == '' || newResource.price == '' || newResource.quantity == '') {

@@ -22,8 +22,16 @@ const Login = (props) => {
                     setUsers(response.data);
                 }
             })
+            const time =  setInterval(timer, 1000);
     }, []);
-
+    const timer =  () => {
+        Axios.get('http://localhost:3001/login')
+        .then(response => {
+            if (response.data !== undefined) {
+                setUsers(response.data);
+            }
+        })
+    }
     const auth = () => {
         users.map(e=>{
             if (e.login == login) {
